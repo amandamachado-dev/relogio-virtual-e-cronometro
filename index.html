@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Relógio Digital</title>
+   
+</head>
+<body>
+
+    <!-- Div onde o relógio digital será exibido -->
+    <div id="relogio"></div>
+
+    <div class="divisor"></div>
+
+    <div class="cronometro">
+        <!-- Div onde o cronômetro será exibido -->
+        <div id="cronometro">00:00:00</div>
+        <div class="buttons">
+            <!-- Botões para controlar o cronômetro -->
+            <button onclick="iniciarCronometro()">Iniciar</button>
+            <button onclick="pararCronometro()">Parar</button>
+            <button onclick="zerarCronometro()">Zerar</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
