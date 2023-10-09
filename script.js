@@ -23,10 +23,11 @@ setInterval(atualizarRelogio, 1000);
 atualizarRelogio();
 
 // Variáveis para controlar o cronômetro
-let cronometroInterval;
+        let cronometroInterval;
         let segundos = 0;
         let minutos = 0;
         let horas = 0;
+        let cronometroEmExecucao = false; // Adicionada uma variável de controle
 
         // Função para atualizar o cronômetro
         function atualizarCronometro() {
@@ -47,13 +48,18 @@ let cronometroInterval;
         // Função para iniciar o cronômetro
         function iniciarCronometro() {
             // Configura um intervalo para chamar a função atualizarCronometro a cada segundo (1000 ms)
-            cronometroInterval = setInterval(atualizarCronometro, 1000);
+            // Verifica se o cronômetro já está em execução antes de criar um novo intervalo
+            if (!cronometroEmExecucao) {
+                cronometroEmExecucao = true;
+                cronometroInterval = setInterval(atualizarCronometro, 1000);
+            }
         }
 
         // Função para parar o cronômetro
         function pararCronometro() {
             // Para o cronômetro
             clearInterval(cronometroInterval);
+            cronometroEmExecucao = false; // Define a variável de controle como false quando parado
         }
 
         // Função para zerar o cronômetro
