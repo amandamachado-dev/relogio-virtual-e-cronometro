@@ -53,7 +53,7 @@ atualizarRelogio();
                 cronometroEmExecucao = true;
                 cronometroInterval = setInterval(atualizarCronometro, 1000);
             }
-        }
+        }    
 
         // Função para parar o cronômetro
         function pararCronometro() {
